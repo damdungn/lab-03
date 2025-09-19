@@ -3,29 +3,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="#C6DBEF"
     tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
+    <TextView
+        android:id="@+id/textHeadline"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:elevation="4dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cities"
-            android:textAppearance="?attr/textAppearanceHeadline6" />
-
-    </com.google.android.material.appbar.MaterialToolbar>
+        android:layout_height="wrap_content"
+        android:text="City List"
+        android:textSize="20sp"
+        android:padding="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="#015C92"
+        android:gravity="center"
+        android:layout_marginBottom="10dp" />
 
     <ListView
-        android:id="@+id/city_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:clipToPadding="false"
-        android:padding="8dp" />
+        android:id="@+id/city_list" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_add_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#015C92"
+        android:clickable="true"
+        android:contentDescription="Add a city"
+        android:focusable="true"
+        app:tint="@color/white"
+        app:srcCompat="@android:drawable/ic_input_add" />
 </LinearLayout>
